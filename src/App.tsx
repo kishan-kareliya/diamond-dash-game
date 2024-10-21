@@ -112,7 +112,6 @@ export default function MineGame() {
       setIsGameOver(true);
       setShowGameOver(true);
       setTimeout(() => playSound("gameOver"), 500);
-      // Reveal all tiles when game is over
       newBoard.forEach((tile, i) => {
         if (tile === "mine") newBoard[i] = "revealed-mine";
         else if (tile === "empty") newBoard[i] = "revealed-safe";
@@ -145,7 +144,7 @@ export default function MineGame() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="space-y-4">
             <h2 className="text-4xl text-center font-bold mb-4 text-white">
-              Mine Game
+              DiamondDash
             </h2>
             <div className="flex justify-center space-x-2 mb-4">
               <Button
